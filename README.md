@@ -1,67 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Presto Shop
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Presto Shop è un'applicazione web sviluppata con Laravel e Livewire, che permette agli utenti di acquistare e vendere articoli usati. Dispone di funzionalità avanzate come gestione degli annunci, revisione da parte di moderatori, supporto multilingua e analisi delle immagini con Google AI Vision.
 
-## About Laravel
+## Caratteristiche Principali
+- *E-commerce*: Facilita l'acquisto e la vendita di articoli usati.
+- *Funzionalità CRUD*: Gestione completa di annunci, utenti e categorie.
+- *Pagina Revisori*: Per l'approvazione o il rifiuto degli annunci pubblicati.
+- *Google AI Vision*: Analizza e classifica le immagini caricate.
+- *Login e Registrazione*: Sistema di autenticazione sicuro tramite Laravel Fortify.
+- *Modulo Annunci Avanzato*: Form dedicato per la pubblicazione degli annunci.
+- *Supporto Multilingua*: Traduzione completa dell'interfaccia.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tecnologie Utilizzate
+### Backend:
+- PHP 8.3
+- Laravel 11
+- Livewire
+- Laravel Fortify
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Frontend:
+- Bootstrap 5.3
+- Bootstrap Icons
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### AI:
+- Google AI Vision
 
-## Learning Laravel
+### Gestione Pacchetti:
+- Node.js con npm
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Requisiti di Sistema
+- *PHP*: >= 8.3
+- *Composer*: Installato nel sistema
+- *Node.js*: >= 16.x
+- *Database*: MySQL
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installazione e Configurazione
+Segui questi passaggi per clonare e configurare il progetto:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clona la repository:
+   sh
+   git clone 
+   
+2. Installa le dipendenze PHP:
+   sh
+   composer install
+   
+3. Crea il file .env e configura il database:
+   sh
+   cp .env.example .env
+   
+4. Genera la chiave dell'applicazione:
+   sh
+   php artisan key:generate
+   
+5. Esegui le migrazioni per creare il database:
+   sh
+   php artisan migrate
+   
+6. Installa le dipendenze JavaScript:
+   sh
+   npm install
+   
+7. Compila i file CSS e JavaScript:
+   sh
+   npm run dev
+   
+8. Avvia il server di sviluppo:
+   sh
+   php artisan serve
+   
+9. Avvia i processi in background per i job della coda:
+   sh
+   php artisan queue:work
+   
 
-## Laravel Sponsors
+## Pacchetti Utilizzati
+- google/cloud-vision ^1.10
+- laravel/fortify ^1.25
+- laravel/framework ^11.31
+- laravel/scout ^10.11
+- laravel/tinker ^2.9
+- livewire/livewire ^3.5
+- outhebox/blade-flags ^1.5
+- spatie/image ^3.7
+- teamtnt/laravel-scout-tntsearch-driver ^14.0
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Utilizzo dell'Applicazione
+### Homepage:
+- Visualizzazione degli annunci più recenti.
 
-### Premium Partners
+### Login e Registrazione:
+- Creazione di un account e accesso per gestire gli annunci.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Pubblicazione Annuncio:
+- Creazione di un nuovo annuncio tramite il modulo dedicato.
 
-## Contributing
+### Sezione Revisori:
+- Gli amministratori possono approvare o rifiutare gli annunci inviati dagli utenti.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Funzionalità per Sviluppatori
+- *Gestione CRUD*: Possibilità di aggiungere, modificare ed eliminare annunci, utenti e categorie.
+- *Integrazione con Google AI Vision*: Analisi delle immagini per garantire conformità e qualità.
+- *Sistema Multilingua*: Traduzione completa dell'interfaccia.
 
-## Code of Conduct
+## Licenza
+Questo progetto è rilasciato sotto licenza *MIT*. Consulta il file LICENSE per maggiori dettagli.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# progetto_presto
+Grazie per aver scelto *Presto Shop*! Per domande o suggerimenti, non esitare a contattarmi.
