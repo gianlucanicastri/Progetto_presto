@@ -1,9 +1,8 @@
 # Presto Shop
 
-Presto Shop è un'applicazione web sviluppata con Laravel e Livewire, che permette agli utenti di acquistare e vendere articoli usati. Dispone di funzionalità avanzate come gestione degli annunci, revisione da parte di moderatori, supporto multilingua e analisi delle immagini con Google AI Vision.
+Presto Shop è un'applicazione web sviluppata con Laravel e Livewire. Dispone di funzionalità avanzate come gestione degli annunci, revisione da parte di moderatori, supporto multilingua e analisi delle immagini con Google AI Vision.
 
 ## Caratteristiche Principali
-- *E-commerce*: Facilita l'acquisto e la vendita di articoli usati.
 - *Funzionalità CRUD*: Gestione completa di annunci, utenti e categorie.
 - *Pagina Revisori*: Per l'approvazione o il rifiuto degli annunci pubblicati.
 - *Google AI Vision*: Analizza e classifica le immagini caricate.
