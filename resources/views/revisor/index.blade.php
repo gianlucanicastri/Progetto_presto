@@ -139,12 +139,12 @@
             {{-- Sezione articoli rifiutati --}}
             <div class="container my-5">
                 <div class="row align-items-center justify-content-center pt-5">
-                    <div class="col-12 d-flex align-items-center gap-5">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
                         <h3 class="c-section-title">{{ __('ui.rejected_articles') }}</h3>
                         <form action="{{ route('articles.deleteRejected') }}" method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare tutti gli articoli rifiutati?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Elimina tutti gli articoli rifiutati</button>
+                            <button type="submit" class="c-button-main rounded-5">Elimina tutti gli articoli rifiutati</button>
                         </form>
                     </div>
 
